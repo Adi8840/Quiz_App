@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        p {
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+
+        .card {
+            height: 97vh;
+            margin-left: 27%;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .options {
+            width: 40vw;
+        }
+
+        .option {
+            display: flex;
+            gap: 0.7rem;
+            width: 35vw;
+            margin-top: 1.7rem;
+            padding: 1rem;
+            font-size: 1.3rem;
+            font-weight: 550;
+            border: 2px solid rgb(133, 126, 21);
+            border-radius: 1rem;
+            box-shadow: 1rem;
+        }
+
+        .option,
+        input,
+        label:hover {
+            cursor: pointer;
+        }
+
+        #nextbtn {
+            font-size: 1.3rem;
+            font-weight: 550;
+            padding: 0.5rem 5rem;
+            border-radius: 0.7rem;
+            margin: 1.1rem 0rem;
+            background-color: rgb(43, 228, 222);
+        }
+
+        #nextbtn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <form action="/questions/<%= id%>" method="post" id=" quesform">
+            <p> Q<%=id%>: <%= data.question %>
+            </p>
+            <div class="options">
+                <% data.options.forEach((opt,ind)=>{%>
+                    <div class="option">
+                        <input type="radio" id="question<%=ind%>" name="quess" value="<%=opt%>" required>
+                        <label for="question<%=ind%>">
+                            <%= opt%>
+                        </label><br>
+                    </div>
+                    <%})%>
+            </div>
+            <button type="submit" id="nextbtn">NEXT</button>
+        </form>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

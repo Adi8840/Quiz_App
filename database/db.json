@@ -1,0 +1,64 @@
+{
+    "questions":[
+        {
+            "question": "Which event occurs when the user clicks on an HTML element?",
+            "options": ["onchange", "onmouseclick", "onclick", "onmouseover"],
+            "answer": "onclick",
+            "id": "0"
+        },
+        {
+            "question": "Which event occurs when the user moves the mouse over an HTML element?",
+          "options": ["onmouseover", "onchange", "onclick", "onmousemove"],
+          "answer": "onmouseover",
+            "id": "1"
+          },
+          {
+            "question": "Which event occurs when an input field is changed?",
+            "options": ["oninput", "onchange", "onfocus", "onblur"],
+            "answer": "onchange",
+            "id": "2"
+          },
+          {
+            "question": "Which event occurs when an HTML form is submitted?",
+            "options": ["onchange", "onsubmit", "onload", "oninput"],
+            "answer": "onsubmit",
+            "id": "3"
+          },
+          {
+            "question": "Which event occurs when an HTML element loses focus?",
+            "options": ["onblur", "onfocus", "onchange", "oninput"],
+            "answer": "onblur",
+            "id": "4"
+          },
+          {
+            "question": "Which event occurs when the user scrolls an HTML element?",
+            "options": ["onscroll", "onmove", "onwheel", "onresize"],
+            "answer": "onscroll",
+            "id": "5"
+          },
+          {
+            "question": "Which event occurs when the user double-clicks on an HTML element?",
+            "options": ["onmouseover", "ondblclick", "onclick", "onmouseout"],
+            "answer": "ondblclick",
+            "id": "6"
+          },
+          {
+            "question": "Which event occurs when the browser has finished loading the page?",
+            "options": ["onload", "onunload", "onready", "onstart"],
+            "answer": "onload",
+            "id": "7"
+          },
+          {
+            "question": "Which event occurs when the user presses a key on the keyboard?",
+            "options": ["onkeydown", "onkeypress", "onkeyup", "oninput"],
+            "answer": "onkeypress",
+            "id": "8"
+          },
+          {    
+            "question": "Which event occurs when an HTML form is submitted?",
+            "options": ["onchange", "onsubmit", "onload", "oninput"],
+            "answer": "onsubmit",
+            "id": "9"
+          }
+    ]
+}

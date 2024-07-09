@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #retakebtn {
+            font-size: 1.3rem;
+            font-weight: 550;
+            padding: 0.4rem 2.3rem;
+            border-radius: 0.7rem;
+            margin: 1.5rem 33rem;
+            background-color: rgb(102, 184, 92);
+        }
+
+        #retakebtn:hover {
+            cursor: pointer;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        .details {
+            position: absolute;
+            margin-top: 7rem;
+            margin-left: 1rem;
+            background-color: aquamarine;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        #myChart {
+            /* border: 3px solid yellow; */
+            margin-left: 30rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/home">
+            <h1 style="margin-left: 40%;">Test Details</h1>
+            <div class="box">
+                <div class="details">
+                    <h2>Name: <%=name%>
+                    </h2>
+                    <h2>Email: <%=email%>
+                    </h2>
+                    <h2>Total Questions: 10</h2>
+                    <h2>Total Correct: <%=correctques%>
+                    </h2>
+                    <h2>Percentage: <%=percentage%>%
+                    </h2>
+                </div>
+                <canvas id="myChart" width="750" height="460"></canvas>
+            </div>
+            <button type="submit" id="retakebtn">RETAKE</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const arr = `<%=colarr%>`;
+            const colorarr = arr.split(",");
+            const ctx = document.getElementById('myChart');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        "Ques 1",
+                        "Ques 2",
+                        "Ques 3",
+                        "Ques 4",
+                        "Ques 5",
+                        "Ques 6",
+                        "Ques 7",
+                        "Ques 8",
+                        "Ques 9",
+                        "Ques 10",
+                    ],
+                    datasets: [
+                        {
+                            label: "Score Chart",
+                            backgroundColor: colorarr,
+                            borderColor: "rgba(75, 192, 192, 1)",
+                            data: [2, 4, 5, 9, 4, 6, 6, 5, 2, 3],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 10
+                        }
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

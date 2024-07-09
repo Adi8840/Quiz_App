@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        .container {
+            height: 97vh;
+            width: 98vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #submitbtn {
+            font-size: 1.3rem;
+            font-weight: 550;
+            padding: 0.4rem 2.3rem;
+            border-radius: 0.7rem;
+            margin: 1.5rem 0rem;
+            background-color: rgb(108, 199, 98);
+        }
+
+        .detail label {
+            font-size: 1.6rem;
+        }
+
+        .detail input {
+            width: 15rem;
+            padding: 0.6rem;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        #submitbtn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/result" method="post">
+        <div class="container">
+            <h1>TEST COMPLETED</h1>
+            <div class="detail">
+                <label for="ApplicantName">Name:</label>
+                <input type="text" id="ApplicantName" name="name" value="" required>
+                <br>
+                <label for="ApplicantEmail">Email:</label>
+                <input type="email" id="ApplicantEmail" name="email" value="" required>
+            </div>
+            <button type="submit" id="submitbtn">SUBMIT TEST</button>
+        </div>
+    </form>
+</body>
+
+</html>
